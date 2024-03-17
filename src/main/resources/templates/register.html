@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, input, textarea, button {
+      font-family: 'Arial', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    header {
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    main {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Sistema de Registro de Clientes</h1>
+
+    <p>Adicionar cliente</p>
+  </header>
+
+  <section class="main">
+    <form action="#" th:action="@{/clients}" th:object="${client}" method="post">
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          th:field="*{name}"
+          minlength="3"
+          placeholder="Digite seu nome"
+          required
+        />
+
+        <label for="cpf">CPF:</label>
+        <input
+          type="text"
+          name="cpf"
+          id="cpf"
+          th:field="*{cpf}"
+          pattern="(\d{3}\d{3}\d{3}\d{2})"
+          maxlength="11"
+          placeholder="Digite seu CPF"
+          required
+        />
+
+        <label for="cellphone">Celular:</label>
+        <input
+          type="tel"
+          name="cellphone"
+          th:field="*{cellphone}"
+          id="cellphone"
+          pattern="(\d{3}\d{3}\d{3}\d{2})"
+          maxlength="11"
+          placeholder="Digite seu celular"
+          required
+        />
+
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          name="email"
+          th:field="*{email}"
+          id="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+
+        <button type="reset">Limpar</button>
+        <button type="submit">Salvar</button>
+    </form>
+  </section>
+</body>
+</html>

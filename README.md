@@ -1,5 +1,5 @@
 <h1 align="center">
-  Sistema Registro de clientes
+  Sistema de Registro de clientes
 </h1>
 
 <p align="center" style="margin-right: 8px">

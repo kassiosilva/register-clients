@@ -29,4 +29,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 1. Antes de tudo tenha certeza que você tem o ambiente Java 17 configurado na sua máquina.
 2. Depois clone o projeto
-3. Agora basta abrir o projeto no Intellij e rodar
+3. Agora basta abrir o projeto no Intellij e executar
